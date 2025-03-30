@@ -1,6 +1,5 @@
-# TodoApplication
 # TodoApp
-A full-stack task management application built with the MERN stack (MongoDB, Express, React, Node.js). This application allows users to create, read, update, and delete tasks with features like task prioritization, due dates, and task completion status.
+A full-stack task management application built with React for the frontend and Node.js/Express for the backend, with MongoDB as the database. This modern web application allows users to organize their work by creating, managing, and tracking tasks with features like priority levels, due dates, and completion status.
 # Features
 •	User authentication (register, login, logout)
 •	Create, view, edit, and delete tasks
