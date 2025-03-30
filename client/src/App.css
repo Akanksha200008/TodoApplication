@@ -1,0 +1,66 @@
+.task-item {
+    transition: all 0.3s;
+  }
+  
+  .task-item:hover {
+    background-color: #f8f9fa;
+  }
+  
+  .completed {
+    text-decoration: line-through;
+    color: #6c757d;
+  }
+  
+  .auth-form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .home-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 50px 20px;
+  }
+  
+  .home-buttons {
+    margin-top: 30px;
+  }
+  
+  .home-buttons .btn {
+    margin: 0 10px;
+  }
+
+  .description-container {
+    white-space: pre-line;
+  }
+  
+  .description-container p {
+    margin-bottom: 0.5rem;
+  }
+  
+  .description-container button {
+    color: #0d6efd;
+    padding: 0;
+    margin-top: 0.5rem;
+    font-size: 0.875rem;
+  }
+
+  html, body, #root {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    overflow-x: hidden;
+  }
+  
+  #root {
+    display: flex;
+    flex-direction: column;
+  }

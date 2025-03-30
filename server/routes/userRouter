@@ -1,0 +1,26 @@
+const express = require('express');
+const router = express.Router();
+const userController = require('../controllers/userController');
+const auth = require('../middleware/auth');
+const User = require('../models/User');
+
+// Public routes
+router.post('/users/register', userController.register);
+router.post('/users/login', userController.login);
+
+// Protected routes
+router.get('/users/profile', auth, userController.getProfile);
+router.get('/users/me', auth, async (req, res) => {
+  try {
+    const user = await User.findById(req.user.id).select('-password');
+    if (!user) {
+      return res.status(404).json({ message: 'User not found' });
+    }
+    res.json(user);
+  } catch (error) {
+    console.error('Error fetching user:', error);
+    res.status(500).json({ message: 'Server error' });
+  }
+});
+
+module.exports = router;
